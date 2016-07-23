@@ -1,3 +1,27 @@
 .robot-info{
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px 0 10px 0;
+  border-radius: 4px;
+  .img-thumbnail{
+    border: none;
+    border-radius: 0;
+  }
+  .images-br{
+    border-right: 1px solid #aaa;
+  }
+  .images-bb{
+    border-bottom: 1px solid #aaa;
+    padding: 0 10px 0 10px;
+  }
+}
+
+body{
+  background-image: url("../images/lego-wallpaper.jpg");
+}
+
+h1{
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
 }
