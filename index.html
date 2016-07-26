@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./css/style.min.css" media="screen" title="no title" charset="utf-8">
     <title>Robot Factory</title>
   </head>
@@ -15,7 +15,9 @@
 <!--Assault robot-->
       <div class="row robot-info">
         <div class="col-sm-6 images-br">
-          <img src="./images/assault_1_cropped.png" alt="EV3 robot" class="img-responsive img-thumbnail images-bb" />
+          <a href="http://philip.domoshar.com/images/assault_1_cropped.png" data-toggle="lightbox">
+            <img src="./images/assault_1_cropped.png" alt="EV3 robot" class="img-responsive img-thumbnail images-bb" />
+          </a>
           <div class="row hidden-xs">
             <div class="col-sm-6">
               <img src="./images/assault_2_cropped.png" alt="EV3 robot" class="img-responsive img-thumbnail" />
@@ -167,5 +169,16 @@
         </div>
       </div>
     </div>
+    <script src="//code.jquery.com/jquery.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function($){
+        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox();
+        });
+      })
+    </script>
   </body>
 </html>
